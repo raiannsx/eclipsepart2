@@ -1,0 +1,56 @@
+package aplicação;
+
+import java.util.Scanner;
+
+public class Programa {
+	private static Object close;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		Produto produto = new Produto();
+
+		System.out.println("Informe o produto que será cadastrado");
+			produto.produto = sc.next();
+		
+		System.out.println("\n");
+		
+		System.out.println("Informe a quantidade");
+			produto.quantidade = sc.nextDouble();
+
+		System.out.println("\n");
+		
+		System.out.println("Informe o preço individual");
+			produto.preço = sc.nextDouble();
+
+		System.out.println("\n");
+		
+		System.out.println("Confirmação " + produto.produto + ", Estoque atual " + produto.quantidade + ", " + "Preço "
+		+ produto.preço);
+		
+		System.out.println("\n");
+		
+		System.out.println("Deseja adicionar mais um produto? Quantos? ");
+			int estoque = sc.nextInt();
+			produto.AddProduto(estoque);
+		
+		System.out.println("\n");	
+			
+		System.out.println("Atualização "+produto.produto+", Estoque Atual: "+produto.quantidade+
+		", Preço: "+produto.preço);
+		
+		System.out.println("\n");
+		
+		System.out.println("Atualmente, alguma venda foi realizada? ");
+			estoque = sc.nextInt();
+			produto.SubProduto(estoque);
+		
+		System.out.println("\n");
+		
+		System.out.println("Atualização pós vendas: "+produto.produto+" Estoque Atual: "+produto.quantidade+
+		"Preço: "+produto.preço);
+		
+
+		sc.close();
+	}
+}
