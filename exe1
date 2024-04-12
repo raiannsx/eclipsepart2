@@ -1,0 +1,18 @@
+package aplicacao;
+
+public class Programa {
+
+	public String produto ;
+	public double quantidade;
+	public double preco;
+	
+	public void add Produto(int estoque) {
+	this.quantidade += estoque;
+		
+	}
+	
+	public.void subproduto(int estoque){
+	this.quantidade -= estoque;
+	
+	}
+}
